@@ -1,0 +1,417 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------- 
+     Stunner Group Fitness Newsletter Website
+
+     Assignment Title: Web Development Coursework 2
+     Submission Date: March 23, 2020
+     Filename: news.html 
+     ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- The report.html document in the directory gives a list of references, and a reference number for its respective reference. When a reference 
+     is mentioned in the webpage documents, its reference number is stated first, followed by the URL.  -->
+<!-- The starter template was taken from the Bootstrap website from the following location - [1] https://getbootstrap.com/docs/4.4/getting-started/introduction/.  
+     The Bootstrap starter template was used so that the Bootstrap framework can be utilised, and so that the JavaScript and JQuery functionality is imbedded 
+     within the template. -->
+
+<!doctype html>
+<html lang="en">
+
+<!-- The Head section is a container for metadata and gives the user information about the webpage. In this section, the character set has been defined to    
+UTF-8 which is a Unicode Transformation Format.It uses 8-bit blocks to portray any given character. The viewport meta tag controls dimensions and scaling of a page. The description meta shows
+the content of the web page. -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description " content="You Can't Be Stunned if You're a Stunner">
+
+    <!-- Bootstrap CSS -->
+    <!-- The Bootstrap Content Delivery Network (CDN) link has been used below from the following link: [2] https://getbootstrap.com/docs/4.0/getting-started/download/. 
+         When the Browser tries to load up the code to read the website, it goes to the CDN link and downloads the 
+         bootstrap files if the user doesn't already have it cached on their browser. -->
+    <!-- A link to a cascading style sheet has been included -->
+    <!-- A link to a font family - IBM Plex Sans has been given below, taken from Google Fonts from the following link: [3] https://fonts.google.com/specimen/IBM+Plex+Sans?selection.family=IBM+Plex+Sans-->
+    <!-- A script source has been added from Font Awesome so that icons can be used, and has been taken from the following URL: [4] https://fontawesome.com/start. Font Awesome is used for icons -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c13d2f6cb.js" crossorigin="anonymous"></script>
+
+
+
+    <!-- The title of the webpage has been kept as News-->
+    <title> News </title>
+</head>
+
+<!-- A body class has been created named newsbody which is specific to the body of the news.html page. This class is purposely created for styling reasons. Some of the webpages have different padding:top requirements -->
+<!-- The body tag encompasses the main body of the webpage code, with key sections and divisions.  -->
+
+<body class="newsbody">
+
+    <!-- Knowledge and guidance of nav classes has been taken from the Bootstrap documentation at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/. 
+         The navbar has been created from scratch and is purely my own work  -->
+    <!-- To begin with, a structure of an unordered list with list items has been used to encapsulate the various navbar links-->
+    <!-- A class of nav-link has been used so that the link can be styled with a hover feature-->
+    <!-- A class of navbar-expand has been used to ensure navbar responsiveness to different sized screens or devices. The class helps to expand the navigation items depending 
+         on how large the screen is. The option that i have chosen is navbar-expand-lg which is the large setting for the class, This means that the navbar will stack vertically 
+         when viewed on a device such as an IPad or IPhone. On a large screen or laptop, the navbar will stack horizontally, unless the screen is minimised  -->
+    <!-- The bg-dark class has been used to set a dark grey background for the navbar. The various colours that can be used are easily seen in the 'buttons' section of the 
+         Bootstrap documentation, found at the following link: [6] https://getbootstrap.com/docs/4.4/components/buttons/ 
+         The navbar font has been set as navbar-dark to ensure that an 'off-white' colour is used for the links-->
+    <!-- A fixed top navigation bar has been opted for, as it ensures the user can have sight of the nav-bar whilst scrolling down the page.  -->
+
+
+
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark ">
+
+        <!--  A class of navbar-brand has been created, imbedding within an anchor tag to insert the brand image. The description on how to insert a brand name 
+              is provided in the Bootstrap documentation found at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/-->
+        <!--  An anchor tag has been created for the logo to ensure that the user can go back to the home page (index.html) by clicking the logo.  -->
+        <a href="index.html" class="navbar-brand"><img class="stunnergrouplogo" src="images/stunnergrouplogowhite.png"
+                alt="group logo"></a>
+
+        <!-- The code for the button below has been taken directly from the Bootstrap Documentation from the following URL: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+        <!-- A hamburger menu has been incorporated for the navbar links when the screen is minimised to a certain size, or when viewing the content from a smartphone or ipad.
+             This ensures a level of responsiveness and ease of use. The method of applying this to my code was taken from the 'toggler' section of the Bootstrap documentation 
+             found at the following link: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+        <!-- To ensure that the hamburger menu functions, a button has been added which targets the specific ID of #navbarTogglerDemo02 so that it knows that when you click on 
+             the button, which div to collapse or uncollapse. Also note how the anchor tag for the brand has been placed above the button as this ensures that the brand is shown
+             on the left of the screen and the button is shown on the right of the screen when in mobile/minimised mode. Another important iteration is that the ml-auto class has 
+             been moved from the unordered list to the div container so that the navbar text still appears on the right of the screen  -->
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- An unordered list has been created with Bootstrap classes, which included four list items - New Products, Macros, Events, News -->
+        <!-- I have chosen to move the unordered list to the right of the screen by adding margin through a class of ml-auto to the unordered list. The auto element of the class 
+             pushes the text with as much margin that can be created to the edge of the screen -->
+        <div class="collapse-navbar-collapse ml-auto" id="navbarTogglerDemo02">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="newproducts.html">New Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="macros.html">Macros </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eventtest.html">Events</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+    <!-- A section has been created with an id of welcome, which is for the welcome message division -->
+    <section id="welcome">
+
+        <div>
+            <div class="macrocaption container-fluid bg-dark">
+
+                <!-- The bootstrap grid system method has been adopted to seperate the heading, buttons and the images in the two key divisions below
+                     On a large sized device (i.e. laptop or bigger) then a 6 unit column will contain the content. Anything smaller than that will take up 
+                     100% of the width of the screen (i.e. tablet or mobile). On a large device, 6 units within the row have been applied to the description and buttons, and 
+                     6 units have been given to the image.-->
+                <!-- The bootstrap framework has been used to style the buttons by adding classes for a dark button and a dark outlined button-->
+                <!-- text colour has been set to text-muted which has been purposely added to compliment the background. -->
+                <!-- code has been used from Font Awesome to add the apple icon and google play icon to the buttons from the following location: https://fontawesome.com/icons/apple?style=brands -->
+                <div class="row">
+                    <div class="col-lg-12 text-light">
+                        <h1>Welcome to the Stunner Group News Blog. </h1>
+                        <h1>Explore our latest news and stay up to date.</h1>
+                    </div>
+
+                    <!-- Another division has been added to encompass an image of an iphone. The image will be placed next to the text and buttons shown in the previous division
+                         The image has been taken from the following URL: https://www.gettyimages.co.uk/detail/illustration/full-screen-mobile-phone-royalty-free-illustration/1061590414?adppopup=true-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- A scrollspy has been created for this section using the following references: [29]  https://getbootstrap.com/docs/4.4/components/scrollspy/ -->
+    <!-- A section has been created with the id scrollspy which includes the scrollspy component -->
+
+    <section id="scrollspy">
+
+        <!-- A data target has been aimed at the navbar class -->
+        <!-- Bootstrap class of expand-sm has been used to expand the scrollspy on a small screen device  -->
+        <!-- The data-spy has been set to scroll, which makes the navbar scroll to the correct division -->
+
+        <div data-spy="scroll" data-target=".navbar" data-offset="50">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+                <ul class="navbar-nav">
+                    <!-- nav-link of offers set to the active class which means that it is highlighted -->
+                    <!-- A list has been created with anchor tags for each link. The bootstrap class of nav-link has been used -->
+                    <li class="nav-item"><a href="#offers" class=" nav-link active ">Offers</a></li>
+                    <li class="nav-item"><a href="#jobs" class=" nav-link">Jobs</a></li>
+                    <li class="nav-item"><a href="#coronavirus" class=" nav-link">Coronavirus</a></li>
+                    <li class="nav-item dropdown">
+                        <!-- A dropdown toggle has been added to the Future Products link -->
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown">Future Products</a>
+                        <div class="dropdown-menu">
+                            <!-- Two dropdown items have been created for Stunner Bars and the Summer Clothing Range -->
+                            <a class="dropdown-item" href="#stunnerbars">Stunner Bars</a>
+                            <a class="dropdown-item" href="#summerclothing">Summer Clothing Range</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Divisions have been created for different news headings, such as offers, jobs, coronavirus etc. -->
+            <!-- The scroll element set in the previous piece of code ensures that the appropriate division is targeted -->
+            <div id="offers" class="container-fluid bg-secondary">
+                <h1>Offers</h1>
+                <p class="text-dark offersp1">A range of sales and offers will start on 2nd April 2020, with up to 40%
+                    off on protein powders and clothing. We strongly believe in providing
+                    our customers will the highest quality products at a reasonable price. The sales and offers will
+                    last until the end of April.
+                </p>
+                <p class=" text-dark offersp2">A range of our products will be showcased at exhibitions and shows so
+                    feel
+                    free to drop by and see us. We will be at the Olympia London on 22nd - 25th May.
+                    We will also be at the Excel Centre at the Natural and Organic Food Event on 7th & 8th July 2020.
+                    Free samples will be given out, so it is a great opportunity
+                    to sample our products. </p>
+            </div>
+            <!-- Each division has a fluid container and the background colours are alternated between green (success) and grey (secondary) -->
+            <div id="jobs" class="container-fluid bg-success">
+                <h1>Jobs</h1>
+                <p class=" text-dark offersp1">We are now hiring for various roles at our main location in West Drayton,
+                    London. We are looking to take on staff in areas such as marketing, production and finance </p>
+                <p class=" text-dark offersp2">We are looking for Male and Female fitness models to promote our range of
+                    new products. If you have experience as a fitness model, then feel free to contact us by email by
+                    applying
+                    for the role stating - Fitness Model Application in subject of the email. Apply by attaching your CV
+                    and cover letter to the email and a portfolio of images of previous modelling work.
+                </p>
+            </div>
+
+            <div id="coronavirus" class="container-fluid bg-secondary">
+                <h1>Coronavirus</h1>
+                <p class=" text-dark offersp1"> Please be assured that we operate a stringent hygiene policy at all
+                    times. We are adhering to the WHO and the UK department of Health's Guidelines on COVID-19 and will
+                    continue to do so.</p>
+                <p class=" text-dark offersp2">We continue to maintain the highest levels of hygeine and safety
+                    standards. Any staff that are feeling unwell will be asked to self-isolate for a period of 7 days.
+                    We are regularly cleaning door handles and
+                    shared surfaces in our office, with strong virucidal cleaners.
+                </p>
+            </div>
+
+            <div id="stunnerbars" class="container-fluid bg-success">
+                <h1>Stunner Bars</h1>
+                <p class=" text-dark offersp1">Our latest formulations are almost complete, and they're going to change
+                    the industry. The new Stunner Protein Bars will be released in the summer, and we are so confident
+                    about their quality, that we openly state that their flavour
+                    and taste is comparable to commercial chocolate. This will be first of a kind, as most Protein Bars
+                    on the market have not been able to emulate the taste of commercial chocolate. </p>
+                <p class="text-dark offersp2"> Our first range of Protein Bars will be available in the following
+                    variations - Milk Chocolate, Dark Chocolate and White Chocolate.
+            </div>
+
+            <div id="summerclothing" class="container-fluid bg-secondary">
+                <h1>Summer Clothing Range</h1>
+                <p class="text-dark offersp1"> It is time to get ready for summer. A new product range will be released
+                    in May, which will include hoodies, jackets, bottoms, shorts, tanks, tracksuits, t-shirts and tops.
+                </p>
+                <p class="text-dark offersp2"> As a seperate product range, we will be releasing our new swimwear, with
+                    shorts for swimming or surfing and trunks which boast special durable material for comfort and
+                    performance
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+
+<!-- reference : footer : [18] https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
+<!-- Although the structure of the footer was taken from the URL in reference 18, it was significantly modified to a point where it looked significantly different. -->
+<!-- The links, CSS Styling, bootstrap styling, icon and icon positions, copyright positions, text formats, content, certain colours and grid responsiveness are all different 
+     to the code taken from the link in reference 18.  -->
+
+<footer>
+
+    <!-- The container has been set to fluid so that the footer takes up the full width of the screen. The background has been kept as dark, however, the text has been centered 
+                 with the class text-center -->
+    <div class="container-fluid footer bg-dark text-center text-md-left">
+
+        <!-- This division includes the columns for each heading - Stunner Group Fitness, Products, Useful Links, and Contact -->
+        <!-- The top margin has been modified to 3px -->
+        <div class="row text-center text-md-left mt-3 pb-3">
+
+            <!-- A customer class of motto has been added to ensure that the footer can be modified using CSS. The column width has also been changed to 3 units for medium, 
+                         large and extra large screens -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+                <h6 class="text-uppercase mb-4 text-light ">Stunner Group Fitness</h6>
+                <p>Stunner Group Fitness is dedicated to provide our customers with high performance and high quality
+                    fitness
+                    products. As our motto states - You can't be stunned if you're a Stunner.
+                </p>
+            </div>
+
+            <!-- The horizontal rule has been set such that the horizontal rule is not displayed on medium devices -->
+
+            <hr class=" d-md-none">
+
+            <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 text-light ">Products</h6>
+                <p class="text-dark">
+                    <a href="newproducts.html">Mass Gain</a>
+                </p>
+                <p>
+                    <a href="newproducts.html">Lean & Mean</a>
+                </p>
+                <p>
+                    <a href="newproducts.html">Plant Based</a>
+                </p>
+
+            </div>
+            <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 text-light ">Useful links</h6>
+                <p>
+                    <a href="news.html">Future Products</a>
+                </p>
+                <p>
+                    <a href="news.html">Jobs</a>
+                </p>
+                <p>
+                    <a href="news.html">Offers</a>
+                </p>
+
+            </div>
+
+            <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- The latest icons are used from Font Awesome for fa-home, fa-envelope and fa-phone -->
+            <!-- i tags have been used to incorporate the icons -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 text-light ">Contact</h6>
+                <p>
+                    <i class="fas fa-home mr-3"></i> West Drayton</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> pammi13@hotmail.co.uk</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +447985 244845</p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Footer links -->
+
+        <hr>
+
+        <!-- Grid row -->
+        <div class="row align-items-center">
+
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+
+                <!-- A copyright message has been used by using the command &copy whilst being placed within a 'strong' tag to emphasise the statement -->
+                <p class="copyright">:
+                    <strong> &copy Copyright 2020 Stunner Group Fitness</strong>
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+                <!-- Icon links and positioning -->
+
+                <div class="buttons">
+                    <div class="text-md-right ">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg mx-1" href="https://en-gb.facebook.com/">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg mx-1" href="https://twitter.com/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg mx-1" href="https://www.instagram.com/?hl=en">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg mx-1" href="https://linkedin.com/">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+
+
+</section>
+
+
+<!-- Script source for jQuery -->
+<!-- Script source for Popper.js -->
+<!-- Script source for Bootstrap CDN -->
+<!-- Script source for handlebars.js CDN -->
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/jquery.slim.min.js"></script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/popper.min.js"></script>
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/bootstrap.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.amd.js"></script> -->
+
+<script src="bootjs/handlebars-v4.7.3.js.min.js"></script>
+
+</html>

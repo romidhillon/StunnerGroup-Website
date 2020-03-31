@@ -1,0 +1,540 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------- 
+     Stunner Group Fitness Newsletter Website
+
+     Assignment Title: Web Development Coursework 2
+     Submission Date: March 23, 2020
+     Filename: index.html 
+     ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- The report.html document in the directory gives a list of references, and a reference number for its respective reference. When a reference 
+     is mentioned in the webpage documents, its reference number is stated first, followed by the URL.  -->
+<!-- The starter template was taken from the Bootstrap website from the following location - [1] https://getbootstrap.com/docs/4.4/getting-started/introduction/.  
+     The Bootstrap starter template was used so that the Bootstrap framework can be utilised, and so that the JavaScript and JQuery functionality is imbedded 
+     within the template. -->
+
+
+<!doctype html>
+<html lang="en">
+
+<!-- The Head section is a container for metadata and gives the user information about the webpage. In this section, the character set has been defined to    
+     UTF-8 which is a Unicode Transformation Format.It uses 8-bit blocks to portray any given character. The viewport meta tag controls dimensions and scaling of a page. The description meta shows
+     the content of the web page. -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description " content="You Can't Be Stunned if You're a Stunner">
+
+    <!-- Bootstrap CSS -->
+    <!-- The Bootstrap Content Delivery Network (CDN) link has been used below from the following link: [2] https://getbootstrap.com/docs/4.0/getting-started/download/. 
+         When the Browser tries to load up the code to read the website, it goes to the CDN link and downloads the bootstrap files if the user doesn't already have it cached on their browser. -->
+    <!-- A link to a cascading style sheet has been included -->
+    <!-- A link to a font family - IBM Plex Sans has been given below, taken from Google Fonts from the following link: [3] https://fonts.google.com/specimen/IBM+Plex+Sans?selection.family=IBM+Plex+Sans-->
+    <!-- A script source has been added from Font Awesome so that icons can be used, and has been taken from the following URL: [4] https://fontawesome.com/start. Font Awesome is used for icons -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c13d2f6cb.js" crossorigin="anonymous"></script>
+
+    <!-- The title of the webpage has been kept as Stunner Group Fitness-->
+    <title>Stunner Group Fitness</title>
+
+</head>
+
+
+<!-- A body class has been created named indexbody which is specific to the body of the index.html page. This class is purposely created for styling reasons. Some of the webpages have different padding:top requirements -->
+<!-- The body tag encompasses the main body of the webpage code, with key sections and divisions.  -->
+
+<body class="indexbody">
+
+    <!-- A new section has been created below with the id - stunnerapp. This section incorporates the Navbar division, and two additional divisions. The first additional 
+         division is for a heading and buttons, and the second division is for an image of an iPhone -->
+
+    <section id="stunnerapp">
+
+
+        <!-- Knowledge and guidance of nav classes has been taken from the Bootstrap documentation at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/. 
+             The navbar has been created from scratch and is purely my own work  -->
+        <!-- To begin with, a structure of an unordered list with list items has been used to encapsulate the various navbar links-->
+        <!-- A class of nav-link has been used so that the link can be styled with a hover feature-->
+        <!-- A class of navbar-expand has been used to ensure navbar responsiveness to different sized screens or devices. The class helps to expand the navigation items depending 
+             on how large the screen is. The option that i have chosen is navbar-expand-lg which is the large setting for the class, This means that the navbar will stack vertically 
+             when viewed on a device such as an IPad or IPhone. On a large screen or laptop, the navbar will stack horizontally, unless the screen is minimised  -->
+        <!-- The bg-dark class has been used to set a dark grey background for the navbar. The various colours that can be used are easily seen in the 'buttons' section of the 
+             Bootstrap documentation, found at the following link: [6] https://getbootstrap.com/docs/4.4/components/buttons/ 
+             The navbar font has been set as navbar-dark to ensure that an 'off-white' colour is used for the links-->
+        <!-- A fixed top navigation bar has been opted for, as it ensures the user can have sight of the nav-bar whilst scrolling down the page.  -->
+
+
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+
+            <!--  A class of navbar-brand has been created, imbedding within an anchor tag to insert the brand image. The description on how to insert a brand name 
+                  is provided in the Bootstrap documentation found at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/-->
+            <!--  An anchor tag has been created for the logo to ensure that the user can go back to the home page (index.html) by clicking the logo.  -->
+            <a href="index.html" class="navbar-brand"><img class="stunnergrouplogo"
+                    src="images/stunnergrouplogowhite.png" alt="Stunner Group Logo"></a>
+
+            <!-- The code for the button below has been taken directly from the Bootstrap Documentation from the following URL: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+            <!-- A hamburger menu has been incorporated for the navbar links when the screen is minimised to a certain size, or when viewing the content from a smartphone or ipad.
+                 This ensures a level of responsiveness and ease of use. The method of applying this to my code was taken from the 'toggler' section of the Bootstrap documentation 
+                 found at the following link: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+            <!-- To ensure that the hamburger menu functions, a button has been added which targets the specific ID of #navbarTogglerDemo02 so that it knows that when you click on 
+                 the button, which div to collapse or uncollapse. Also note how the anchor tag for the brand has been placed above the button as this ensures that the brand is shown
+                 on the left of the screen and the button is shown on the right of the screen when in mobile/minimised mode. Another important iteration is that the ml-auto class has 
+                 been moved from the unordered list to the div container so that the navbar text still appears on the right of the screen  -->
+            <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- An unordered list has been created with Bootstrap classes, which included four list items - New Products, Macros, Events, News -->
+            <!-- I have chosen to move the unordered list to the right of the screen by adding margin through a class of ml-auto to the unordered list. The auto element of the class 
+                 pushes the text with as much margin that can be created to the edge of the screen -->
+            <div class="collapse-navbar-collapse ml-auto" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="newproducts.html">New Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="macros.html">Macros </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventtest.html">Events</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- A division with a class of container-fluid has been created so that the container takes up 100% of the width of the screen on all screen sizes.  -->
+
+        <div class="container-fluid">
+
+            <!-- Two buttons have been added below followed by an anchor tag which encapsulates the Font Awesome icons. This ensures the anchor tag is placed next to the icon and within the button. 
+                 The order is of great importance, otherwise the link is not encapsulated within the button. Guidance was taken from [9] https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp-->
+            <!-- The first button takes the user to the App store and the second button takes the user to the Google Play Store so that the Stunner App can be downloaded on an IOS or Android device -->
+            <!-- The bootstrap grid system method has been adopted to separate the heading, buttons and the images in the two divisions below.
+                 On a large sized device (i.e. laptop or bigger), the heading h1 and buttons take a column of 6 units by using the class col-lg-6. The heading and buttons are take up 8 units on a medium and small sized 
+                 device. This means that the heading and buttons within the division remain responsive when the user uses different screen sizes. -->
+            <!-- The bootstrap framework has also been used to style the buttons by adding classes for a dark button and a dark outlined button-->
+            <!-- Code has been imbedded from Font Awesome to add the Apple icon for the App store and the Google Play icon from the following link :[8] https://fontawesome.com/icons/apple?style=brands -->
+
+
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-8">
+                    <h1>Download the Stunner Group Fitness App.</h1>
+                    <button type="button" aria-hidden="true" class="download btn btn-dark d-button"> </a><i
+                            class="fab fa-apple"> <a href="https://www.apple.com/uk/ios/app-store/"
+                                class="btn-btn-dark text-light" role="button">Download</a> </i></button>
+                    <button type="button" aria-hidden="true" class="download btn btn-outline-dark d-button"> </a><i
+                            class="fab fa-google-play"> <a href="https://play.google.com/music/listen"
+                                class="btn-btn-dark text-muted" role="button">Download</a> </i></button>
+                </div>
+
+                <!-- Another division has been added to encompass an image of an iPhone. The image is placed next to the text and buttons shown in the previous division
+                     The image is royalty free and has been taken from getty images at following URL: [10] https://www.gettyimages.co.uk/detail/illustration/full-screen-mobile-phone-royalty-free-illustration/1061590414?adppopup=true-->
+                <!-- The display of the images are responsive and ample research was conducted to understand how the display settings are used to make the iPhone disappear at a specific breakpoint . The images only show on a large and extra large screen, but disappear on 
+                     smaller screen sizes. This has been purposely designed, as the owner of Stunner Group did not want the images showing onn smaller screens.  This was implemented by using a class of d-none on any size other than xl and large.  -->
+
+                <div class="col-lg-6 d-none d-lg-block d-xl-block">
+                    <img class="iphone-image" src="images/iphonemacro.png"
+                        alt="An iphone image with the Stunner Group App is shown">
+                    <img class="iphone-image2" src="images/calories.png"
+                        alt="A second image with the Stunner Group App is shown">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- The section with the id - app-features has been created to provide an overview of the key features of the new Stunner Group App-->
+    <!-- Three divisions have been created within the section. The three headings and paragraphs have been encompassed within each respective div tag -->
+    <!-- each div takes up a third of the width of the screen, on a large desktop or laptop. However, when the div is on a smaller device such as the iPhone or iPad, each div will take up 100% of the width. 
+         Bootstrap classes have been used to style the divisions (column class large with four units - to take up a third of the screen on a large device). These have been nested inside a div class named 'row' 
+         as required by the Bootstrap framework. Therefore, each div is laid across the same row. The responsiveness is also present, as the divisions take up 100% of the width when the screen is minimised 
+         past a certain point.  -->
+    <!-- The caloric intake, pie chart and dumbbell icons have been used from Font Awesome from the following URL: [11] https://fontawesome.com/icons/utensils?style=solid, 
+         [12] https://fontawesome.com/icons/chart-pie?style=solid, [13] https://fontawesome.com/icons/dumbbell?style=solid and the size of the icon has been set to 4 pixels (fa-4x) -->
+    <!-- A custom class has been created named 'icon' in order to style each icon with a colour using CSS.  -->
+
+    <section id="app-features">
+
+        <div class="row">
+
+            <div class="feature col-lg-4">
+                <i class="icon fas fa-utensils fa-4x"></i>
+                <h3>Caloric intake</h3>
+                <p>Calculate the amount of calories you need to consume each day</p>
+
+            </div>
+
+            <div class="feature col-lg-4">
+
+                <i class="icon fas fa-chart-pie fa-4x"></i>
+                <h3>Macros</h3>
+                <p>Log your macro-nutrient split between carbohydrates, proteins, and fats. </p>
+
+            </div>
+
+            <div class="feature col-lg-4">
+
+                <i class="icon fas fa-dumbbell fa-4x"></i>
+                <h3>Training Plans</h3>
+                <p>A range of built-in training plans to choose from</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- The section below has been created to show client testimonials -->
+    <!-- Images have been taken from a royalty free website, permitting use of images.  -->
+    <!-- The before and after royalty free image of a hypothetical person 'pam' has been taken from the following URL: [14] https://www.shutterstock.com/image-photo/real-before-after-weight-loss-photo-541208512 -->
+    <!-- The before and after royalty free image of a hypothetical person 'David' has been taken from the following URL: [15] https://www.shutterstock.com/ -->
+
+    <!-- A carousel has been created using the Bootstrap framework. Template code has been taken from the Bootstrap documentation at the following link :[15] https://getbootstrap.com/docs/4.4/components/carousel/#with-controls  -->
+    <!-- A description of each of the components of the carousel has been provided in this comment.  -->
+
+
+    <section id="client-testimonials">
+        <!-- A div tag has been created which has the id of the carousel, which needs to be unique across 
+             the page. A custom class has been used named carousel and a slide class has been used so that the slides animate and slide from right to left. -->
+        <!-- Data-ride has been set to false, which means that the slides do not auto play. The division carousel-inner has been created to contain the contents of two carousel items, and the first item has been 
+             marked as an active class. Each item has its own content in terms of images, headings and captions. -->
+
+        <div id="testimonialcarousel" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h2> This is the best app I have ever used. Thanks to Stunner Group Fitness, I have been able to
+                        lose 25lb in 3 months!</h2>
+                    <img class="testimonial-image" src="images/pam-beforeafter.jpg" alt="before and after image of Pam">
+                    <em> Pam Stone, United Kingdom</em>
+                </div>
+                <div class="carousel-item">
+                    <h2>By using the Stunner Group Fitness App, and buying their products, I have been able to gain
+                        muscle and reduce fat!</h2>
+                    <img class="testimonial-image2" src="images/davidweller.jpg" alt="before and after image of David">
+                    <em>David Weller, United Kingdom</em>
+                </div>
+            </div>
+
+            <!-- Two buttons have also been created, one with class carousel-control-prev (left button) which has a href so that it knows which carousel to target. A role of button has 
+                 been assigned in order to change the anchor tag into a button. The data slide has been set to previous, so that it is clear which direction the slide is to move once the previous 
+                 button is pressed. The span contains the button icon, which is generated from Bootstrap by adding in the span class. -->
+            <!-- The 'aria-hidden' command which has been set to true. This is a very intriguing aspect of the code, because a 
+                 visually impaired person may come across the website. A visually impaired person usually used a screen reader, which goes through the website, and reads what is on there. For things 
+                 like buttons, you don't want the screen reader to read out 'left button' or 'right button'. The aria hidden feature makes the screen reader skip over the button span so that a visually 
+                 impaired person does not have to listen to where all the buttons are. This ensures that the website is more accessible and friendly to people with disabilities. -->
+
+            <a class="carousel-control-prev" href="#testimonialcarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">previous</span>
+            </a>
+
+            <!-- The span class 'sr-only' stands for screen reader only, which makes the reader read out 'previous' or 'next' rather than
+                 the whole piece of code.  -->
+            <a class="carousel-control-next" href="#testimonialcarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">next</span>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- A section has been created below for new products, which includes information on three different new products -->
+    <!-- A card deck has been created below using the Bootstrap Framework. Guidance for coding the card deck from scratch was followed from the Bootstrap website, taken from the following URL: 
+         [17] https://getbootstrap.com/docs/4.4/components/card/#card-decks -->
+    <!-- Three separate cards were first created using the div class 'card' in each case. Two divisions have been created within each card with classes named 
+         card header and card body. The header of the card goes inside the card header, and the body of the card encapsulates the additional wording through 
+         the use of headings and paragraphs.  -->
+    <!-- In order to stack the cards next to each other horizontally (rather than vertically), a div class of card deck has been used to wrap all of the other
+         cards inside of it - Please note that this was modified as the code progressed (see further comments)  -->
+    <!-- The cards have been placed within the Bootstrap grid system in order to size them accordingly to how responsive you want the website to be. The importance here 
+         is to make the third card to 100% of the width when displayed on an iPad, whilst keeping the first two cards at a width of 50%. Only when moving to the mobile 
+         size do all three cards display at 100% of the screen.  -->
+    <!-- In order to implement the grid system, the card-deck class was replaced with 'row'. Within this, a new division has been created for each card with class col-lg-4 so that each card 
+         takes up 4 units (1/3 of the screen) when on a large device.  -->
+    <!-- On a medium sized devices such as an iPad, the top two cards need to take up half of the width of the page, which is col-md-6. This is why the first two cards have this 
+         class applied to them. For a small sized device, all three cards now sit underneath each other (100% of the width of the screen) -->
+    <!-- The card buttons have also been styled using Bootstrap classes i.e. btn. The btn-lg class specifies that the button needs to be large. The class btn-block means that the button takes up the 
+         full width of the card. The class of btn-success means that the button will be green in colour.  -->
+
+    <section id="newproducts">
+        <h2>Check out our new range of protein powders</h2>
+        <p>Our new products have been created to help you reach optimum protein levels whilst focusing on nutrition</p>
+
+        <!-- A card has been created with the div class of card, encapsulating the card header and card body -->
+        <!-- A div class of row has been used which is important to start with before stating column requirements -->
+        <div class="row">
+
+            <div class="products-column col-lg-4 col-md-6">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3> Stunner Mass Gain </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h2>£34.99</h2>
+                        <p>100% Premium Whey</p>
+                        <p>30g of pure protein per scoop</p>
+                        <p>No artificial colours, flavours or preservatives</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button"><a href="newproducts.html"
+                                class="btn-btn-dark text-light" role="button">More Product Details</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- A card has been created with the div class of card, encapsulating the card header and card body -->
+
+            <div class="products-column col-lg-4 col-md-6">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3>Stunner Lean and Mean</h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h2>£32.99</h2>
+                        <p>100% Premium Whey</p>
+                        <p>28g of protein per scoop</p>
+                        <p>No artificial colours, flavours or preservatives</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button"><a href="newproducts.html"
+                                class="btn-btn-dark text-light" role="button">More Product Details</a></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- A card has been created with the div class of card, encapsulating the card header and card body -->
+            <div class="products-column col-lg-4">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3>Stunner Plant Based</h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h2>£32.99</h2>
+                        <p>100% Vegan,25g of protein per scoop,no Xanthan gum</p>
+                        <p>Tolerase Digestive Enzyme included</p>
+                        <p>No artificial colours,flavours or preservatives</p>
+                        <button class="btn btn-lg btn-block btn-dark" type="button"><a href="newproducts.html"
+                                class="btn-btn-dark text-light" role="button">More Product Details</a></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- reference : footer : [18] https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
+        <!-- Although the structure of the footer was taken from the URL in reference 18, it was significantly modified to a point where it looked significantly different. -->
+        <!-- The links, CSS Styling, bootstrap styling, icon and icon positions, copyright positions, text formats, content, certain colours and grid responsiveness are all different 
+             to the code taken from the link in reference 18.  -->
+
+        <footer>
+
+            <!-- The container has been set to fluid so that the footer takes up the full width of the screen. The background has been kept as dark, however, the text has been centered 
+                 with the class text-center -->
+            <div class="container-fluid footer bg-dark text-center text-md-left">
+
+                <!-- This division includes the columns for each heading - Stunner Group Fitness, Products, Useful Links, and Contact -->
+                <!-- The top margin has been modified to 3px -->
+                <div class="row text-center text-md-left mt-3 pb-3">
+
+                    <!-- A customer class of motto has been added to ensure that the footer can be modified using CSS. The column width has also been changed to 3 units for medium, 
+                         large and extra large screens -->
+                    <!-- Margin for the division has been set with mx-auto, margin top: 3 and responsive grid column settings -->
+                    <div class=" motto col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+                        <h6 class="text-uppercase mb-4 text-light ">Stunner Group Fitness</h6>
+                        <p>Stunner Group Fitness is dedicated to provide our customers with high performance and high
+                            quality fitness
+                            products. As our motto states - You can't be stunned if you're a Stunner.
+                        </p>
+                    </div>
+
+
+                    <!-- The horizontal rule has been set such that the horizontal rule is not displayed on medium devices -->
+                    <hr class=" d-md-none">
+
+
+                    <!-- A column heading of Products has been stated with Anchor tags that have been used for the following links - Mass Gain, Lean & Mean and Plant Based -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 text-light ">Products</h6>
+                        <p class="text-dark">
+                            <a href="newproducts.html">Mass Gain</a>
+                        </p>
+                        <p>
+                            <a href="newproducts.html">Lean & Mean</a>
+                        </p>
+                        <p>
+                            <a href="newproducts.html">Plant Based</a>
+                        </p>
+
+                    </div>
+
+                    <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+                    <hr class="w-100 clearfix d-md-none">
+
+                    <!-- A column heading of Useful links has been stated with Anchor tags that have been used for the following links - Future Products, Jobs and Offers -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 text-light ">Useful links</h6>
+                        <p>
+                            <a href="news.html">Future Products</a>
+                        </p>
+                        <p>
+                            <a href="news.html">Jobs</a>
+                        </p>
+                        <p>
+                            <a href="news.html">Offers</a>
+                        </p>
+
+                    </div>
+
+                    <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+                    <hr class="w-100 clearfix d-md-none">
+
+                    <!-- The latest icons are used from Font Awesome for fa-home, fa-envelope and fa-phone -->
+                    <!-- i tags have been used to incorporate the icons -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 text-light ">Contact</h6>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> West Drayton</p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> Stunnergroup@outlook.com</p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +447985 244845</p>
+
+                    </div>
+
+
+                </div>
+
+
+                <hr>
+
+                <!-- This division includes the copyright statement and icon links  -->
+                <div class="row align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8">
+
+                        <!-- A copyright message has been used by using the command &copy whilst being placed within a 'strong' tag to emphasise the statement -->
+                        <p class="copyright">:
+                            <strong> &copy Copyright 2020 Stunner Group Fitness</strong>
+                            </a>
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="col-md-5 col-lg-4  ml-lg-0">
+
+                        <!-- Icon links and positioning -->
+                        <!-- Icons have been added for Facebook, Twitter, Instagram and LinkedIn -->
+                        <!-- Lists have been made inline with the class list-inline -->
+                        <!-- Icon margin spacing has been set using class mx-1 -->
+
+                        <div class="buttons">
+                            <div class="text-md-right ">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a class=" btn-lg mx-1" href="https://en-gb.facebook.com/">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="btn-lg mx-1" href="https://twitter.com/">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="btn-lg mx-1" href="https://www.instagram.com/?hl=en">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class=" btn-lg mx-1" href="https://linkedin.com/">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <!-- Content Delivery Networks were previously added, but were changed to libraries imbedded within the directory. 
+         The CDN links have been commented out -->
+    <!-- Script source for jQuery -->
+    <!-- Script source for Popper.js -->
+    <!-- Script source for Bootstrap CDN -->
+    <!-- Script source for handlebars.js CDN -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script> -->
+
+    <script src="bootjs/jquery.slim.min.js"></script>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script> -->
+
+    <script src="bootjs/popper.min.js"></script>
+
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script> -->
+
+    <script src="bootjs/bootstrap.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.amd.js"></script> -->
+
+    <script src="bootjs/handlebars-v4.7.3.js.min.js"></script>
+
+</body>
+
+</html>

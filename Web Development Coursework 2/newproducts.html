@@ -1,0 +1,876 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------- 
+     Stunner Group Fitness Newsletter Website
+
+     Assignment Title: Web Development Coursework 2
+     Submission Date: March 23, 2020
+     Filename: newproducts.html 
+     ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- The report.html document in the directory gives a list of references, and a reference number for its respective reference. When a reference 
+     is mentioned in the webpage documents, its reference number is stated first, followed by the URL.  -->
+<!-- The starter template was taken from the Bootstrap website from the following location - [1] https://getbootstrap.com/docs/4.4/getting-started/introduction/.  
+     The Bootstrap starter template was used so that the Bootstrap framework can be utilised, and so that the JavaScript and JQuery functionality is imbedded 
+     within the template. -->
+
+
+<!doctype html>
+<html lang="en">
+
+<!-- The Head section is a container for metadata and gives the user information about the webpage. In this section, the character set has been defined to    
+     UTF-8 which is a Unicode Transformation Format.It uses 8-bit blocks to portray any given character. The viewport meta tag controls dimensions and scaling of a page. The description meta shows
+     the content of the web page. -->
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="You Can't be Stunned if You're a Stunner">
+
+  <!-- Bootstrap CSS -->
+  <!-- The Bootstrap Content Delivery Network (CDN) link has been used below from the following link: [2] https://getbootstrap.com/docs/4.0/getting-started/download/. 
+       When the Browser tries to load up the code to read the website, it goes to the CDN link and downloads the 
+       bootstrap files if the user doesn't already have it cached on their browser. -->
+  <!-- A link to a cascading style sheet has been included -->
+  <!-- A link to a font family - IBM Plex Sans has been given below, taken from Google Fonts from the following link: [3] https://fonts.google.com/specimen/IBM+Plex+Sans?selection.family=IBM+Plex+Sans-->
+  <!-- A script source has been added from Font Awesome so that icons can be used, and has been taken from the following URL: [4] https://fontawesome.com/start. Font Awesome is used for icons -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600i&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0c13d2f6cb.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.js"></script>
+
+  <!-- The title of the webpage has been kept as Stunner Group Fitness-->
+  <title>New Products </title>
+</head>
+
+
+<!-- The body tag encompasses the main body of the webpage code, with key sections and divisions.  -->
+
+<body>
+
+  <!-- Knowledge and guidance of nav classes has been taken from the Bootstrap documentation at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/. 
+       The navbar has been created from scratch and is purely my own work  -->
+  <!-- To begin with, a structure of an unordered list with list items has been used to encapsulate the various navbar links-->
+  <!-- A class of nav-link has been used so that the link can be styled with a hover feature-->
+  <!-- A class of navbar-expand has been used to ensure navbar responsiveness to different sized screens or devices. The class helps to expand the navigation items depending 
+       on how large the screen is. The option that i have chosen is navbar-expand-lg which is the large setting for the class, This means that the navbar will stack vertically 
+       when viewed on a device such as an IPad or IPhone. On a large screen or laptop, the navbar will stack horizontally, unless the screen is minimised  -->
+  <!-- The bg-dark class has been used to set a dark grey background for the navbar. The various colours that can be used are easily seen in the 'buttons' section of the 
+       Bootstrap documentation, found at the following link: [6] https://getbootstrap.com/docs/4.4/components/buttons/ 
+       The navbar font has been set as navbar-dark to ensure that an 'off-white' colour is used for the links-->
+  <!-- A fixed top navigation bar has been opted for, as it ensures the user can have sight of the nav-bar whilst scrolling down the page.  -->
+
+  <nav class="navbar navbar-expand-md fixed-top static-top navbar-dark bg-dark ">
+
+    <!-- A class of navbar-brand has been created, imbedding within an anchor tag to insert the brand image. The description on how to insert a brand name 
+          is provided in the Bootstrap documentation found at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/-->
+    <!-- An anchor tag has been created for the logo to ensure that the user can go back to the home page (index.html) by clicking the logo.  -->
+    <a href="index.html" class="navbar-brand"><img class="stunnergrouplogo" src="images/stunnergrouplogowhite.png"
+        alt="group logo"></a>
+
+    <!-- The code for the button below has been taken directly from the Bootstrap Documentation from the following URL: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+    <!-- A hamburger menu has been incorporated for the navbar links when the screen is minimised to a certain size, or when viewing the content from a smartphone or ipad.
+         This ensures a level of responsiveness and ease of use. The method of applying this to my code was taken from the 'toggler' section of the Bootstrap documentation 
+         found at the following link: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+    <!-- To ensure that the hamburger menu functions, a button has been added which targets the specific ID of #navbarTogglerDemo02 so that it knows that when you click on 
+         the button, which div to collapse or uncollapse. Also note how the anchor tag for the brand has been placed above the button as this ensures that the brand is shown
+         on the left of the screen and the button is shown on the right of the screen when in mobile/minimised mode. Another important iteration is that the ml-auto class has 
+         been moved from the unordered list to the div container so that the navbar text still appears on the right of the screen  -->
+
+    <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- An unordered list has been created with Bootstrap classes, which included four list items - New Products, Macros, Events, News -->
+    <!-- I have chosen to move the unordered list to the right of the screen by adding margin through a class of ml-auto to the unordered list. The auto element of the class 
+         pushes the text with as much margin that can be created to the edge of the screen -->
+
+    <div class="hamburger collapse-navbar-collapse ml-auto" id="navbarTogglerDemo02">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="newproducts.html">New Products </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="macros.html">Macros </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="eventtest.html">Events</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">News</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- reference: [19]  https://codepen.io/geoffgraham/pen/jrWwWM -->
+  <!-- The typewriter effect is only present in a large or medium screen size, which has been enabled with the @media command in CSS at a specific breakpointThe 
+       typewriter effect is covered by the expanding navbar in a small screen setting. -->
+
+
+  <div class="typeeffect">
+    <h1>Explore our new range of protein powders</h1>
+  </div>
+
+
+  <!-- The section below focuses on code for the Mass Gain protein powder using the Bootstrap Grid methodology-->
+  <!-- Margin settings and column settings have been set based on the design requirements of the site.  -->
+  <!-- Six icons have been used from Font Awesome for the next three sections, icons named 'dna, flask, dumbbell, capsules, seedling and ice cream' -->
+
+
+  <section class="MassGain">
+
+    <div class="container-fluid p-6 massgaindiv">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <!-- The size of each icon has been set to 2px -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dna"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <!-- Font weight for the headings has been set to bold  -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">High Protein Content</h5>
+              <p class="grey-text">We pride ourselves on having one of the highest protein content with 30 grams of
+                protein per scoop. </p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-flask"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">High Quality Protein</h5>
+              <p class="grey-text">The powder is made with expert filtration systems, made only with superior protein
+                isolate for optimum muscle growth. </p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-md-0 mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dumbbell"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Bulking Formula</h5>
+              <p class="grey-text mb-md-0">The formula has high amounts of carbohydrate and protein, with low levels of
+                fat. This is the perfect mix for bulking.</p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <!-- Grid column -->
+        <!-- The alt tag has been made descriptive on purpose for the visually impaired  -->
+
+        <div class="col-md-4 text-center">
+          <img class="img-fluid" src="images/stunnermassgain.png"
+            alt="This is an image of the Stunner Group Mass Gain Protein Shake">
+        </div>
+
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="far fa-2x fas fa-capsules"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">BCAAs</h5>
+              <p class="grey-text">Branch Chain Amino Acids are important to build muscle, reduce fatigue and alleviate
+                muscle soreness.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-seedling"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">No Junk</h5>
+              <p class="grey-text">Free from aritificial sweeteners, additives or preservatives. Also contains
+                Tolerase-L
+                enzyme for easier digestion. </p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-ice-cream"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Tasty Flavours</h5>
+              <p class="grey-text mb-0">Eight great flavours available: chocolate, vanilla, strawberry, cookies and
+                cream,
+                banana, rasberry and coffee.</p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- The section below focuses on code for the Lean & Mean protein powder using the Bootstrap Grid methodology-->
+  <!-- A similar format/structure has been used in this section as the previous section.  -->
+
+  <section class="Lean&Mean">
+
+    <div class="container-fluid p-6">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dna"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">High Protein Low Fat</h5>
+              <p class="grey-text">Not only does the formula contain high levels of protein, the formula has a low
+                amount
+                of fat, which is perfect for a diet focusing on cutting.
+              </p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-flask"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">High Quality Protein</h5>
+              <p class="grey-text">The powder is made with expert filtration systems, made only with superior protein
+                isolate for optimum muscle growth.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-md-0 mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dumbbell"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Cutting Formula</h5>
+              <p class="grey-text mb-md-0">The low calorie content per scoop along with low levels of fat ensures that
+                the
+                powder can be incorporated into the diet to maintain muscle and reduce bodyfat</p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <!-- Grid column -->
+        <!-- The alt tag has been made descriptive on purpose for the visually impaired  -->
+        <div class="col-md-4 text-center">
+          <img class="img-fluid" src="images/stunnerleanandmean.png"
+            alt="This is an image of the Stunner Group Lean & Mean Protein Shake">
+        </div>
+
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="far fa-2x fas fa-capsules"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">BCAAs</h5>
+              <p class="grey-text">Branch Chain Amino Acids are important to build muscle, reduce fatigue and alleviate
+                muscle soreness.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-seedling"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Made in the UK</h5>
+              <p class="grey-text">All of our range of protein powders have been manufactured and packaged in the UK. We
+                pride ourselves on our authentic and high quality products.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-ice-cream "></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Additional Flavours</h5>
+              <p class="grey-text mb-0">The lean & mean protein shake is available in all flavours listed for our Mass
+                Gain Shake, but also includes marshmallow and cola flavours</p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- The section below focuses on code for the Plant-Based protein powder using the Bootstrap Grid methodology-->
+  <!-- This section has a similar structure to the previous two sections -->
+
+  <section class="plantBased">
+
+    <div class="container-fluid p-6">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dna"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">100% Vegan and Gluten Free</h5>
+              <p class="grey-text">All of the protein comes from plant sources, and is suitable for vegans and those who
+                want a gluten free blend.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-flask"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Vitamin C & Vitamin B12</h5>
+              <p class="grey-text">The formula contains 100% of the nutrient reference value for vitamin C per scoop,
+                and
+                is a good source of vitamin b12.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-md-0 mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-dumbbell"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">3 Types of Proteins </h5>
+              <p class="grey-text mb-md-0">The combination of organic pea, brown rice and sacha inchi proteins ensures
+                there is a complete amino acid profile.</p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <!-- Grid column -->
+        <!-- The alt tag has been made descriptive on purpose for the visually impaired  -->
+        <div class="col-md-4 text-center">
+          <img class="img-fluid" src="images/stunnerplantbased.png"
+            alt="This is an image of the Stunner Group Plant Based Protein Shake">
+        </div>
+
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="far fa-2x fas fa-capsules"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Non-GMO</h5>
+              <p class="grey-text">The formula is non-GMO that is free from artificial colours, flavours and sweeteners.
+              </p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row mb-3">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-seedling"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Certified Organic</h5>
+              <p class="grey-text">Organic certification has been acquired from the USDA, ensuring highest levels of
+                quality conformance.</p>
+            </div>
+
+
+          </div>
+
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-2">
+              <i class="fas fa-2x fa-ice-cream"></i>
+            </div>
+
+
+            <!-- Grid column -->
+            <div class="col-10">
+              <h5 class="font-weight-bold mb-3">Cutting and Bulking</h5>
+              <p class="grey-text mb-0">The formula has moderate amounts of fat and carbohydrates with high levels of
+                protein which means it is suitable for both cutting and bulking. </p>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- Handlebars.js methodology has been used for the final division before the footer. The purpose of this is to show the functionality of handlebars and its use.  -->
+  <!-- The code used within the handlebars methodology had to be encapsulated within the bootstrap grid.  -->
+  <!-- The code below was developed from scratch by taking guidance from the University of London Web Development module lectures at the following URL: 
+       [20] https://www.coursera.org/learn/uol-web-development/lecture/IeE2U/9-2-1-handlebars-js-helpers -->
+  <!-- A thorough description of the code development has been provided in the report.html document -->
+
+  <section class="handlebars">
+
+    <!-- Handlebars.js helpers have been used by by incorporating a helper with a 'caps' command
+         ensuring that the dynamic title is capitalised -->
+    <!-- This is done by returning a text through a function and then transforming it to
+         uppercase -->
+
+    <div class="container-fluid purchase1 bg-light text-md-left">
+      <div class="row text-center text-md-left text-dark ">
+
+        <div class="grid-container-index purchase1">
+          <header>
+            <script id="template" type="template/handlebars">
+              <h1>{{caps "Protein Shake Purchase" lower="no"}}</h1>
+                          </script>
+            <span id="target"></span>
+          </header>
+          <script>
+            // the options.hash.lower is set to no, which means that the title 'Protein Shake Purchase' is set to capitals.
+            // If options.hash.lower is changed to 'yes', then the title changes to lowercase
+            // Get Element By ID has been used to fetch the template
+            var src = document.getElementById("template").innerHTML;
+            var template = Handlebars.compile(src);
+            Handlebars.registerHelper("caps", function (text, options) {
+              if (!options.hash.lower || options.hash.lower === "no") {
+                return text.toUpperCase();
+              } else {
+                return text.toLowerCase();
+              }
+
+            })
+            var rendered = template();
+            document.getElementById("target").innerHTML = rendered;
+          </script>
+
+        </div>
+
+        <!-- A division has been created with a purchase template inside, which fetched by the getElementbyId command further down the code -->
+        <div id="purchase">
+          <div id="purchaseparagraph">
+            <script id="purchasetemplate" type="template/handlebars">
+              <p>{{purchase}}</p>
+                      </script>
+            <span id="purchasetarget"></span>
+          </div>
+        </div>
+      </div>
+
+      <script id="purchasetemplate" type="template/handlebars">
+        <h1>{{caps "Protein Shake Purchase" lower="yes"}}</h1>
+          </script>
+      <span id="target"></span>
+      </header>
+      <script>
+        // The helper name was changed and a switch statement was added to allow the code to switch between languages. 
+        // Three different switch cases have been added for three languages : English, French and German for the paragraph underneath the Protein Purchase heading.
+        // Get Element By ID has been used to fetch the purchase template
+        // A return value has been set for each switch case
+
+
+        var purchasesrc = document.getElementById("purchasetemplate").innerHTML;
+        var purchasetemplate = Handlebars.compile(purchasesrc);
+        Handlebars.registerHelper("purchase", function (options) {
+          switch (options.data.language) {
+            case "en":
+              return "If you would like to purchase any of the Stunner Group Protein Shakes or any other products, please visit the main Stunner Group site. When visiting the main site, please go to the Stunner Group Fitness section for purchases.";
+            case "de":
+              return "Wenn Sie einen der Stunner Group Protein Shakes oder andere Produkte kaufen möchten, besuchen Sie bitte die Hauptwebsite der Stunner Group. Wenn Sie die Hauptseite besuchen, besuchen Sie bitte den Bereich Stunner Group Fitness, um Einkäufe zu tätigen."
+            case "fr":
+              return "Si vous souhaitez acheter l'un des Stunner Group Protein Shakes ou tout autre produit, veuillez visiter le site principal de Stunner Group. Lorsque vous visitez le site principal, veuillez vous rendre dans la section Stunner Group Fitness pour les achats."
+            default:
+              return "If you would like to purchase any of the Stunner Group Protein Shakes or any other products, please visit the main Stunner Group site. When visiting the main site, please go to the Stunner Group Fitness section for purchases."
+          }
+        })
+
+        var purchaserendered = purchasetemplate({}, {
+          data: {
+            language: "en"
+          }
+        });
+        document.getElementById("purchasetarget").innerHTML = purchaserendered;
+      </script>
+
+
+    </div>
+
+  </section>
+
+</body>
+
+
+<!-- reference : footer : [18] https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
+<!-- Although the structure of the footer was taken from the URL in reference 18, it was significantly modified to a point where it looked significantly different. -->
+<!-- The links, CSS Styling, bootstrap styling, icon and icon positions, copyright positions, text formats, content, certain colours and grid responsiveness are all different 
+     to the code taken from the link in reference 18.  -->
+
+<footer>
+
+  <!-- The container has been set to fluid so that the footer takes up the full width of the screen. The background has been kept as dark, however, the text has been centered 
+       with the class text-center -->
+  <div class="container-fluid footer bg-dark text-center text-md-left">
+
+    <!-- This division includes the columns for each heading - Stunner Group Fitness, Products, Useful Links, and Contact -->
+    <!-- The top margin has been modified to 3px -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- A customer class of motto has been added to ensure that the footer can be modified using CSS. The column width has also been changed to 3 units for medium, 
+           large and extra large screens -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+        <h6 class="text-uppercase mb-4 text-light ">Stunner Group Fitness</h6>
+        <p>Stunner Group Fitness is dedicated to provide our customers with high performance and high quality fitness
+          products. As our motto states - You can't be stunned if you're a Stunner.
+        </p>
+      </div>
+
+      <!-- The horizontal rule has been set such that the horizontal rule is not displayed on medium devices -->
+      <hr class=" d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 text-light ">Products</h6>
+        <p class="text-dark">
+          <a href="newproducts.html">Mass Gain</a>
+        </p>
+        <p>
+          <a href="newproducts.html">Lean & Mean</a>
+        </p>
+        <p>
+          <a href="newproducts.html">Plant Based</a>
+        </p>
+
+      </div>
+
+      <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 text-light ">Useful links</h6>
+        <p>
+          <a href="news.html">Future Products</a>
+        </p>
+        <p>
+          <a href="news.html">Jobs</a>
+        </p>
+        <p>
+          <a href="news.html">Offers</a>
+        </p>
+
+      </div>
+
+      <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- The latest icons are used from Font Awesome for fa-home, fa-envelope and fa-phone -->
+      <!-- i tags have been used to incorporate the icons -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 text-light ">Contact</h6>
+        <p>
+          <i class="fas fa-home mr-3"></i> West Drayton</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> pammi13@hotmail.co.uk</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> +447985 244845</p>
+
+      </div>
+
+
+    </div>
+
+
+    <hr>
+
+    <!-- This division includes the copyright statement and icon links  -->
+    <div class="row align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8">
+
+        <!-- This division includes the copyright statement and icon links  -->
+        <p class="copyright">:
+          <strong> &copy Copyright 2020 Stunner Group Fitness</strong>
+          </a>
+        </p>
+
+      </div>
+
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Icon links and positioning -->
+
+        <div class="buttons">
+          <div class="text-md-right ">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-lg mx-1" href="https://en-gb.facebook.com/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-lg mx-1" href="https://twitter.com/">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-lg mx-1" href="https://www.instagram.com/?hl=en">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-lg mx-1" href="https://linkedin.com/">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</footer>
+
+
+<!-- Content Delivery Networks were previously added, but were changed to libraries imbedded within the directory. 
+     The CDN links have been commented out -->
+<!-- Script source for jQuery -->
+<!-- Script source for Popper.js -->
+<!-- Script source for Bootstrap CDN -->
+<!-- Script source for handlebars.js CDN -->
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/jquery.slim.min.js"></script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/popper.min.js"></script>
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script> -->
+
+<script src="bootjs/bootstrap.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.amd.js"></script> -->
+
+<script src="bootjs/handlebars-v4.7.3.js.min.js"></script>
+
+
+</html>

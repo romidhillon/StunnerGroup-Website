@@ -1,0 +1,378 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------- 
+     Stunner Group Fitness Newsletter Website
+
+     Assignment Title: Web Development Coursework 2
+     Submission Date: March 23, 2020
+     Filename: eventtest.html 
+     ------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- The report.html document in the directory gives a list of references, and a reference number for its respective reference. When a reference 
+     is mentioned in the webpage documents, its reference number is stated first, followed by the URL.  -->
+<!-- The starter template was taken from the Bootstrap website from the following location - [1] https://getbootstrap.com/docs/4.4/getting-started/introduction/.  
+     The Bootstrap starter template was used so that the Bootstrap framework can be utilised, and so that the JavaScript and JQuery functionality is imbedded 
+     within the template. -->
+
+
+<!doctype html>
+<html lang="en">
+
+<!-- The Head section is a container for metadata and gives the user information about the webpage. In this section, the character set has been defined to    
+UTF-8 which is a Unicode Transformation Format.It uses 8-bit blocks to portray any given character. The viewport meta tag controls dimensions and scaling of a page. The description meta shows
+the content of the web page. -->
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description " content="You Can't Be Stunned if You're a Stunner">
+
+  <!-- Bootstrap CSS -->
+  <!-- The Bootstrap Content Delivery Network (CDN) link has been used below from the following link: [2] https://getbootstrap.com/docs/4.0/getting-started/download/. 
+       When the Browser tries to load up the code to read the website, it goes to the CDN link and downloads the 
+       bootstrap files if the user doesn't already have it cached on their browser. -->
+  <!-- A link to a cascading style sheet has been included -->
+  <!-- A link to a font family - IBM Plex Sans has been given below, taken from Google Fonts from the following link: [3] https://fonts.google.com/specimen/IBM+Plex+Sans?selection.family=IBM+Plex+Sans-->
+  <!-- A script source has been added from Font Awesome so that icons can be used, and has been taken from the following URL: [4] https://fontawesome.com/start. Font Awesome is used for icons -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600i&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0c13d2f6cb.js" crossorigin="anonymous"></script>
+
+  <!-- The title of the webpage has been kept as Events & Exhibitions-->
+  <title>Events & Exhibitions</title>
+</head>
+
+
+<body class="eventbody">
+
+  <!-- A body class has been created named eventbody which is specific to the body of the index.html page. This class is purposely created for styling reasons. Some of the webpages have different padding:top requirements -->
+  <!-- The body tag encompasses the main body of the webpage code, with key sections and divisions.  -->
+
+  <section id="stunnerapp">
+
+
+    <!-- Knowledge and guidance of nav classes has been taken from the Bootstrap documentation at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/. 
+         The navbar has been created from scratch and is purely my own work  -->
+    <!-- To begin with, a structure of an unordered list with list items has been used to encapsulate the various navbar links-->
+    <!-- A class of nav-link has been used so that the link can be styled with a hover feature-->
+    <!-- A class of navbar-expand has been used to ensure navbar responsiveness to different sized screens or devices. The class helps to expand the navigation items depending 
+         on how large the screen is. The option that i have chosen is navbar-expand-lg which is the large setting for the class, This means that the navbar will stack vertically 
+         when viewed on a device such as an IPad or IPhone. On a large screen or laptop, the navbar will stack horizontally, unless the screen is minimised  -->
+    <!-- The bg-dark class has been used to set a dark grey background for the navbar. The various colours that can be used are easily seen in the 'buttons' section of the 
+         Bootstrap documentation, found at the following link: [6] https://getbootstrap.com/docs/4.4/components/buttons/ 
+         The navbar font has been set as navbar-dark to ensure that an 'off-white' colour is used for the links-->
+    <!-- A fixed top navigation bar has been opted for, as it ensures the user can have sight of the nav-bar whilst scrolling down the page.  -->
+
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+
+      <!--  A class of navbar-brand has been created, imbedding within an anchor tag to insert the brand image. The description on how to insert a brand name 
+            is provided in the Bootstrap documentation found at the following link: [5] https://getbootstrap.com/docs/4.4/components/navbar/-->
+      <!--  An anchor tag has been created for the logo to ensure that the user can go back to the home page (index.html) by clicking the logo.  -->
+
+      <a href="index.html" class="navbar-brand"><img class="stunnergrouplogo" src="images/stunnergrouplogowhite.png"
+          alt="group logo"></a>
+
+      <!-- The code for the button below has been taken directly from the Bootstrap Documentation from the following URL: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+      <!-- A hamburger menu has been incorporated for the navbar links when the screen is minimised to a certain size, or when viewing the content from a smartphone or ipad.
+           This ensures a level of responsiveness and ease of use. The method of applying this to my code was taken from the 'toggler' section of the Bootstrap documentation 
+           found at the following link: [7] https://getbootstrap.com/docs/4.4/components/navbar/#toggler -->
+      <!-- To ensure that the hamburger menu functions, a button has been added which targets the specific ID of #navbarTogglerDemo02 so that it knows that when you click on 
+           the button, which div to collapse or uncollapse. Also note how the anchor tag for the brand has been placed above the button as this ensures that the brand is shown
+           on the left of the screen and the button is shown on the right of the screen when in mobile/minimised mode. Another important iteration is that the ml-auto class has 
+           been moved from the unordered list to the div container so that the navbar text still appears on the right of the screen  -->
+      <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- An unordered list has been created with Bootstrap classes, which included four list items - New Products, Macros, Events, News -->
+      <!-- I have chosen to move the unordered list to the right of the screen by adding margin through a class of ml-auto to the unordered list. The auto element of the class 
+           pushes the text with as much margin that can be created to the edge of the screen -->
+      <div class="collapse-navbar-collapse ml-auto" id="navbarTogglerDemo02">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="newproducts.html">New Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="macros.html">Macros </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventtest.html">Events</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </nav>
+
+
+  </section>
+
+
+  <!-- A section has been created below for the jumbotron  -->
+  <section id="Jumbotron">
+
+    <!-- The jumbotron documentation was used as guidance when implementing the Jumbotron. The documentation is found at: [22] https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+
+    <div class="jumbotron jumbotron-fluid ">
+      <div class="container">
+        <h1 class="display-4 ">Upcoming Events & Exhibitions</h1>
+        <p class="lead">Come and visit us at a range of events and exhibitions in the UK, including the
+          London Olympia & NEC Birmingham </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- bubble effect -->
+  <!-- Guidance was taken from the following main sources when developing the bubble effect -->
+  <!-- reference: [23] https://www.youtube.com/watch?v=qK3cgD09Qf0 -->
+  <!-- [24] https://www.youtube.com/watch?v=0jQQCxuPF8k -->
+  <!-- A section has been created below for the canvas named events canvas -->
+
+  <section id="eventscanvas">
+
+    <div class="bubblecanvas">
+      <canvas id="mycanvas"></canvas>
+      <script src="javascript/events.js"></script>
+    </div>
+
+  </section>
+
+  <!-- A section has been created below for the events and exhibitions named events -->
+
+  <section id="events">
+
+    <!-- image taken from : [25] https://www.visitlondon.com/things-to-do/place/280574-olympia-london -->
+    <div class=" olympiadiv border-success text-center center-block card mb-3 col-lg-12 col-md-12 col-sm-12  ">
+      <img class="olympiapic text-center card-img-top" src="images/olympialondon.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Mind Body Spirit Wellbeing Festival at the Olympia London - 22nd - 25th May 2020</h5>
+        <p class="card-text">If you are into nutrition, yoga, wellbeing and healthy eating, then come and visit us at
+          the Olympia London in May and sample our range of products </p>
+        <p class="card-text"><small class="text-muted">For more information, please contact us</small></p>
+      </div>
+    </div>
+
+    <!-- image taken from : [26] https://london-canarywharf.frasershospitality.com/en/attractions/hotels-near-excel-london -->
+    <div class=" exceldiv text-center border-success center-block card mb-3 col-lg-12 col-md-12 col-sm-12 ">
+      <img class="olympiapic text-center card-img-top" src="images/excellondon2.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Natural and Organic Food Event at the Excel Centre London - 7th & 8th July 2020 </h5>
+        <p class="card-text">Demand for vegan and natural plant based foods has increased due to greater awareness of
+          the effects of non-vegan diets. Join us at the Natural
+          and Organic Food Event and see our latest range of plant based and vegan products. We will also be
+          showcasing our latest protein powder - the Stunner Plant-Based
+          Protein Shake. Visit the Excel London website to book tickets.</p>
+        <p class="card-text"><small class="text-muted">For more information, please contact us</small></p>
+      </div>
+    </div>
+
+    <!-- Image taken from: [27]  https://www.findmeaconference.com/details/west-midlands/birmingham-international-airport/the-nec-birmingham -->
+    <div class=" bodypowerdiv text-center border-success center-block card mb-3 col-lg-12 col-md-12 col-sm-12 ">
+      <img class="olympiapic text-center card-img-top" src="images/nec.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">BodyPower Exhibition at the National Exhibition Centre Birmingham - 15th - 17th May
+          2020</h5>
+        <p class="card-text">The Stunner Group can be found at the BodyPower Exhibition exhibiting sports nutrition,
+          supplements and gym clothing </p>
+        <p class="card-text"><small class="text-muted">For more information, please contact us</small></p>
+      </div>
+    </div>
+
+    <!-- image taken from: [28] https://babylontours.com/visiting-alexandra-palace-london/ -->
+
+    <div class="alexandrapalacediv text-center border-success center-block card mb-3 col-lg-12 col-md-12 col-sm-12 ">
+      <img class="olympiapic text-center card-img-top" src="images/alexandrapalace.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Mind Body Soul Exhibition at Alexandra Palace London - 16th - 18th October 2020</h5>
+        <p class="card-text">Stunner Group Fitness will focus on presenting its organic and vegan range of products at
+          the Mind Body Soul Exhibition</p>
+        <p class="card-text"><small class="text-muted">For more information, please contact us</small></p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- reference : footer : [18] https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
+  <!-- Although the structure of the footer was taken from the URL in reference 18, it was significantly modified to a point where it looked significantly different. -->
+  <!-- The links, CSS Styling, bootstrap styling, icon and icon positions, copyright positions, text formats, content, certain colours and grid responsiveness are all different 
+       to the code taken from the link in reference 18.  -->
+
+  <footer>
+
+    <!-- The container has been set to fluid so that the footer takes up the full width of the screen. The background has been kept as dark, however, the text has been centered 
+         with the class text-center -->
+    <div class="container-fluid footer bg-dark text-center text-md-left">
+
+      <!-- This division includes the columns for each heading - Stunner Group Fitness, Products, Useful Links, and Contact -->
+      <!-- The top margin has been modified to 3px -->
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- A customer class of motto has been added to ensure that the footer can be modified using CSS. The column width has also been changed to 3 units for medium, 
+             large and extra large screens -->
+        <div class=" motto col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+          <h6 class="text-uppercase mb-4 text-light ">Stunner Group Fitness</h6>
+          <p>Stunner Group Fitness is dedicated to provide our customers with high performance and high quality
+            fitness
+            products. As our motto states - You can't be stunned if you're a Stunner.
+          </p>
+        </div>
+
+        <!-- The horizontal rule has been set such that the horizontal rule is not displayed on medium devices -->
+
+        <hr class=" d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 text-light ">Products</h6>
+          <p class="text-dark">
+            <a href="newproducts.html">Mass Gain</a>
+          </p>
+          <p>
+            <a href="newproducts.html">Lean & Mean</a>
+          </p>
+          <p>
+            <a href="newproducts.html">Plant Based</a>
+          </p>
+
+        </div>
+        <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 text-light ">Useful links</h6>
+          <p>
+            <a href="news.html">Future Products</a>
+          </p>
+          <p>
+            <a href="news.html">Jobs</a>
+          </p>
+          <p>
+            <a href="news.html">Offers</a>
+          </p>
+
+        </div>
+
+
+        <!-- The width of the horizontal rule has been set to 100px for the benefit of the design. -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- The latest icons are used from Font Awesome for fa-home, fa-envelope and fa-phone -->
+        <!-- i tags have been used to incorporate the icons -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 text-light ">Contact</h6>
+          <p>
+            <i class="fas fa-home mr-3"></i> West Drayton</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> Stunnergroup@outlook.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> +447985 244845</p>
+
+        </div>
+
+
+      </div>
+
+
+      <hr>
+
+      <!-- This division includes the copyright statement and icon links  -->
+      <div class="row align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!-- A copyright message has been used by using the command &copy whilst being placed within a 'strong' tag to emphasise the statement -->
+          <p class="copyright">:
+            <strong> &copy Copyright 2020 Stunner Group Fitness</strong>
+            </a>
+          </p>
+
+        </div>
+
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4  ml-lg-0">
+
+          <!-- Icon links and positioning -->
+
+          <div class="buttons">
+            <div class="text-md-right ">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-lg mx-1" href="https://en-gb.facebook.com/">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-lg mx-1" href="https://twitter.com/">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-lg mx-1" href="https://www.instagram.com/?hl=en">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-lg mx-1" href="https://linkedin.com/">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+  </section>
+
+  <!-- Script source for jQuery -->
+  <!-- Script source for Popper.js -->
+  <!-- Script source for Bootstrap CDN -->
+  <!-- Script source for handlebars.js CDN -->
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script> -->
+
+  <script src="bootjs/jquery.slim.min.js"></script>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script> -->
+
+  <script src="bootjs/popper.min.js"></script>
+
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script> -->
+
+  <script src="bootjs/bootstrap.min.js"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.amd.js"></script> -->
+
+  <script src="bootjs/handlebars-v4.7.3.js.min.js"></script>
+</body>
+
+</html>

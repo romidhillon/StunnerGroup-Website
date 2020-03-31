@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+/* -- ------------------------------------------------------------------------------------------------------------------------- 
+        Stunner Group Fitness Newsletter Website
+
+        Assignment Title: Web Development Coursework 2
+        Submission Date: March 23, 2020
+        Filename: style.css
+------------------------------------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* body css code */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The overall font for the website has been set as 'Montserrat', sans-serif. */
+/* Bootstrap documentation provided the preferred solution to the padding required to the body when adding a sticky navbar. A sticky navbar ensures that the navbar is 
+visible when scrolling down the page. However, this caused the body to be 'pushed up' whilst the navbar overlapped key divisions. The recommended solution is to add a top 
+padding to the body of maximum 70px. in this instance, i chose 55px as it was a sufficient amount. Additional top padding has been used at specific breakpoints in later code*/
+/* The overflow in the x-direction has been hidden to restrict the webpages from scrolling in the horizontal direction */
+
+body {
+
+font-family:'Montserrat', sans-serif; 
+padding-top:55px;
+overflow-x: hidden;
+}
+
+/* The @media advanced CSS technique has been used to create a breakpoint at a screen width of 575px so that a top padding of 170px is added to the body of the index.html file */
+    
+.indexbody { 
+
+    font-family:'Montserrat', sans-serif; 
+    padding-top:65px;
+    overflow-x: hidden;
+    }
+    
+    @media (max-width:575px) {
+        .indexbody {
+            padding-top:170px;
+        }
+    }
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* navigation bar css code  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The font for the brand within the Navigation bar has been set to IBM Plex Sans as requested by the client */
+/* However, this was later changed to incorporate an image of the brand logo as a link back to the main site */
+
+.navbar-brand {
+
+font-family:'IBM Plex Sans', sans-serif;
+}
+
+.stunnergrouplogo {
+
+    height: 55px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+   
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* index.html page - CSS Code */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* Stunner App Section index.html page */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The colour of the background for the stunnerapp section has been set to green #81E10E */
+#stunnerapp {
+background-color: #81E10E;
+}
+
+/* h1 headings  */
+/* All h1 headings have been assigned the 'Montserrat', sans-serif font */
+h1 {
+font-family: 'Montserrat', sans-serif;
+font-size: 3rem;
+line-height: 1.5;
+}
+
+/* h3 headings  */
+/* All h1 headings have been assigned the 'Montserrat', sans-serif font */
+
+h2 {
+
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+}
+
+h3 { 
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* the colour of the paragraphs has been changed to grey so that it stands out less in comparison to the h3 headings. This is because it is intended for the readers 
+attention to be taken to the headings before the text.  */
+
+p { 
+
+    color: #8f8f8f;
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* fluid container division  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The padding for the fluid container has been set to 5% 5% 2% 7% on the top, right, bottom and left.  */
+.container-fluid {
+
+padding: 5% 5% 7% 7%;
+}
+
+/* The font on the right hand side of the navigation bar has been spaced out by setting the padding to 10px left qnd right. */
+
+.nav-item {
+
+padding: 0 10px;
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* download buttons  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The download buttons have been given a margin of 5% 3% 5% 0% to ensure that there is enough space from other items; */
+.d-button {
+
+margin: 5% 3% 5% 0%;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* iphone image css code */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The width of the iPhone image has been set to 40% as the original size when inserted was too large.  */
+/* The first iPhone image with the macros has been rotated by 25 degrees using the transform command  */
+/* The position of the iPhone image has been set to absolute to assist with the z-index assignment. */
+/* A second image of the app has been shown without transforming the image and shows the calories function.  */
+
+/* Image 1 of iphone, rotated to 25 degrees */
+.iphone-image {
+
+width: 40%;
+transform: rotate(25deg);
+position: absolute;
+}
+
+/* Image 2 of iphone, not rotated  */
+.iphone-image2 {
+
+    width: 40%;
+    
+    position: absolute;
+    right: 60px;
+    top:10px;
+    }
+
+/* The download button text has been slightly increased and the font-size has been set to 110% to make the font and button larger  */
+
+.download {
+
+    font-size: 110%;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* app features section  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* A padding has been added to the top and bottom by 5.5% and a padding of 15% has been added to the left and right. The padding has 
+   been set to this amount as the additional space around the wording makes it easier to read.   */
+/* All of the text for each feature within the app features section has been centred.  */
+/* The background colour has been set to white to make the process of z-index easier  */
+/* Advanced CSS has been used with the z-index technique. Although the image has got an x or y position, it also has a z position, which 
+states if the image is coming more towards a user or further away from a user. In order to make the image go behind the feature section, the images
+z-index needs to be lower than that of the section we are trying to bring in front of it. The default z-index for an object is set to 0. The z-index
+only works if the elements have a positioning.*/
+/* By keeping the position as relative, it keeps the element within the HTML flow, but will allow our element to have a position, so we can 
+assign it a z-index.  */
+
+
+#app-features {
+
+padding: 5.5% 15%;
+background-color: #fff;
+position: relative;
+z-index: 1;
+}
+
+.feature { 
+
+    text-align: center;
+
+}
+
+/* A bottom margin of 1rem has been added to slightly increase the spacing between the icons and the headings.  */
+/* The icon colour has been set to #292b2c as this is the hex code equivalent for the Bootstrap colour 'success' */
+.icon {
+
+    color: #5cb85c;
+    margin-bottom: 1rem;
+
+}
+
+/* The icon hover colour has been set to hex code #8f8f8f  */
+.icon:hover { 
+    color: #8f8f8f;
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* client testimonials section */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+#client-testimonials { 
+
+    padding: 5% 15%;
+    text-align: center;
+    background-color: #81E10E;
+    
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* testimonial images */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* The border-radius styling command has been used to create a circular border around the testimonial images  */
+/* A 40 pixel margin has been applied to the top only, to separate the distance from the image with the font.  */
+/* The width of each image has been set to a different amount to ensure that the carousel container doesn't change size when scrolling  */
+
+.testimonial-image { 
+
+    width: 24%;
+    border-radius: 100%;
+    margin: 40px 0 0 0 ;
+}
+
+.testimonial-image2 { 
+
+    width: 30%;
+    border-radius: 100%;
+    margin: 40px 0 0 0 ;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* new products section */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+#newproducts { 
+
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.products-column {
+
+    padding: 3% 2%;
+}
+
+.img-fluid { 
+
+    position: relative;
+    top: -20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.massgaindiv { 
+
+    position: relative;
+    top: 30px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* CSS Code for macros.html */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* I tried to find a solution to move the division down when the navbar expands. When the navbar expands at the set breakpoint of a small screen, the navbar was originally covering the division. I couldn't find a solution to 
+    move the division down when the navbar reached this breakpoint so i searched around on various forums to see if other people had come across a similar problem. I found the solution on stackoverflow.com and tried to use the same
+    methodology. A new body class for the events page was created named eventbody.  An @media command is used to create a breakpoint at a max-width screen size of 575px (approx small screen). At this screen size, 
+    the padding-top value changes to 170px for the body, ensuring that the navigation menu can expand whilst the division below it 'shifts downwards'  */
+
+.macrobody { 
+
+        font-family:'Montserrat', sans-serif; 
+        padding-top:65px;
+        overflow-x: hidden;
+        }
+        
+        @media (max-width:575px) {
+            .macrobody {
+                padding-top:170px;
+            }
+        }
+
+.caloriecalc {
+
+    padding: 5%;
+}
+
+/* To bring the input of the macro calculator in alignment with those of the calorie calculator, a form class was created for the macro calculator. 
+   The input within the div has been specifically selected within the form so that it can be styled with a left position of 100px.  */
+   .calories > div > input{ 
+
+    position: relative;
+    left: 100px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* newproducts.html typeeffect   */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* Relative positioning added 10% from the left  */
+/* Overflow hidden ensures that none of the text can be seen until it is typed out by the typewriter */
+/* The nowrap setting on the white-space keeps the content on a single line */
+/* The margin auto style ensures that the scrolling effect happens as the typing takes place */
+/* The typing takes place for a total duration of 3.8 seconds with 30 steps until the end */
+
+
+.typeeffect h1 {
+    position: relative;
+    left: 10%;
+    color: #8f8f8f;
+    font-family: monospace;
+    overflow: hidden; 
+    border-right: .1em solid #81E10E; 
+    white-space: nowrap; 
+    margin:  auto; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.8s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typeeffect cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #81E10E }
+  }
+
+.typeeffect { 
+
+    padding: 2%;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* footer css   */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+.footer { 
+
+    padding: 1%;
+    width: 100%;
+    position:absolute;
+    left: 0;
+ 
+}
+
+
+
+hr { 
+
+    background-color: #8f8f8f;
+    width: 85%;
+    
+}
+
+.fab {
+
+    color: green;
+   
+}
+
+.copyright { 
+
+    position: relative;
+
+    text-align: center;
+    
+}
+
+.buttons { 
+
+    position: relative;
+    right: 20%;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* eventtest.html page  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/*  @media command used once again to create a breakpoint at 575px, but this time it is used for the eventtest.html page */
+.eventbody { 
+
+font-family:'Montserrat', sans-serif; 
+padding-top:65px;
+overflow-x: hidden;
+}
+
+@media (max-width:575px) {
+    .eventbody {
+        padding-top:170px;
+    }
+}
+
+/* The canvas for the bubble effect has been styled below. This was important, as the particles needed to move behind the 
+   images but in a manner which suits the page. The width and height of the canvas was set to 400%  */
+
+#mycanvas {
+
+position: absolute;
+top: 300px;;
+width: 400%;
+height: 400%;
+background: #f9f9f9 ;
+}
+
+a:hover { 
+
+    color: #81E10E;
+}
+
+a:link {
+
+    color: #8f8f8f;
+}
+
+a {
+
+    color: #8f8f8f;
+}
+
+/* The footer had to be incorporated into the events page with different css styling to other pages due to the incorporation of the canvas */
+.eventsfooter { 
+
+    margin-top: 800px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+/* A text-align of justify was originally used for one column of the footer, however, it did not look aesthetically pleasing on a medium sized screen, so it was changed to left aligned.  */
+
+.motto { 
+
+    text-align: left;
+}
+
+
+
+
+
+/* Although the image is fluid, adjustments were made to the width and the margin-left and margin-right set to auto ensured it was centered */
+
+.olympiapic  { 
+
+
+    width: 75%;
+    background-color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* The top border for the division has been set to none so that it becomes invisible to the user. This was done as the padding-top was set to 40px to make space for the canvas and bubble effect  */
+.olympiadiv {
+
+    margin-top: 60px;
+    border:none;
+}
+
+/* the top border for the division has been set to none so that it becomes invisible to the user. This was done as the padding-top was set to 40px to make space for the canvas and javascript effect  */
+.exceldiv {
+
+    margin-top: 60px;
+    border:none;
+}
+
+/* the top border for the division has been set to none so that it becomes invisible to the user. This was done as the padding-top was set to 40px to make space for the canvas and javascript effect  */
+.bodypowerdiv {
+
+    margin-top: 60px;
+    border:none;
+}
+
+/* the top border for the division has been set to none so that it becomes invisible to the user. This was done as the padding-top was set to 40px to make space for the canvas and javascript effect  */
+.alexandrapalacediv {
+
+    margin-top: 60px;
+    border:none;
+}
+
+/* I wanted to have the canvas (ball effect using Javascript) showing on a large screen and then wanted it to disappear for medium and small sized screen. I initially attempted to do this by 
+    encompassing the canvas inside the bootstrap grid by putting the canvas inside a row. After much research, i found that this was not possible. I then came up with a way to do this by using 
+    advanced CSS through a @media command. The command below ensures that the canvas disappears below a maximum width of 1000px. After this point, the display has been set to 'none'.   */
+
+@media only screen and (max-width:1000px) {
+    #mycanvas {
+
+        display: none;
+    
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* news webpage  */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* The body class for the news webpage has been named .newsbody and the padding top at a max-width of 575px has been set to 175px which is different to other webpages. */
+
+.newsbody { 
+
+    font-family:'Montserrat', sans-serif; 
+    padding-top:65px;
+    overflow-x: hidden;
+    }
+    
+    @media (max-width:575px) {
+        .newsbody {
+            padding-top:175px;
+        }
+    }
+
+/* The paragraphs for the offers division has been aligned to justify with a line height of 30px */
+.offersp1 .offersp2  {
+
+    line-height: 30px;
+    font-size: 130%;
+    text-align: justify;
+}
+
+
+/* Padding top and bottom for the jobs, coronavirus, stunner bars and summer clothing divisions has been set to 40px */
+
+.jobs .coronavirus .stunnerbars .summerclothing { 
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+}
